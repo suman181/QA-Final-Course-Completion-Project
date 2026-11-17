@@ -1,0 +1,3007 @@
+{
+  "info": {
+    "_postman_id": "cbe509b1-be10-492b-9456-d77ea87fe6cf",
+    "name": "API-Testing-ecommerce-store-31",
+    "description": "Tests for the ReqRes project ecommerce-store-31 (products collection).\n\n/api/* uses x-api-key (manage key for admin CRUD, public key for auth). /app/* uses Authorization: Bearer <session token>.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46657755",
+    "_collection_link": "https://go.postman.co/collection/46657755-cbe509b1-be10-492b-9456-d77ea87fe6cf?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Collection Records",
+      "item": [
+        {
+          "name": "List records",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 200\", () => pm.response.to.have.status(200));\n\nconst json = pm.response.json();\npm.test(\"data is an array\", () => pm.expect(json.data).to.be.an(\"array\"));\npm.test(\"meta has page and total\", () => {\n  pm.expect(json).to.have.property(\"meta\");\n  pm.expect(json.meta).to.have.property(\"page\");\n  pm.expect(json.meta).to.have.property(\"total\");\n});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{manageKey}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/collections/products/records?page=1&limit=10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "collections",
+                "products",
+                "records"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Success List records",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "{{manageKey}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records?page=1&limit=10",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "200"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:35:01 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"368-GEx//l5/0M+xXEyAUjYfwt9CaqQ\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=FKaa%2FaoAnyU9z%2FETcjYzQ7nRJyRqp19%2FbForKiX9MaE%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794886501\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=FKaa%2FaoAnyU9z%2FETcjYzQ7nRJyRqp19%2FbForKiX9MaE%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794886501\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "162"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794960000"
+                },
+                {
+                  "key": "x-reqres-trial",
+                  "value": "true"
+                },
+                {
+                  "key": "x-reqres-trial-days-remaining",
+                  "value": "14"
+                },
+                {
+                  "key": "x-reqres-trial-expires",
+                  "value": "2026-12-01T01:07:34.341Z"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "4c5636c9-55f3-a640-5ca1-6d0a6d6f7efc"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "BYPASS"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbaed61b218e57-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"37580f69-91cd-49f7-9082-3922ea3939d8\",\n      \"collection_id\": \"5f0746c4-bc86-48b5-a053-5e83403744d3\",\n      \"project_id\": 58528,\n      \"app_user_id\": null,\n      \"created_by\": 151710,\n      \"created_at\": \"2026-11-17T03:10:16.062Z\",\n      \"updated_at\": \"2026-11-17T03:22:58.377Z\",\n      \"deleted_at\": null,\n      \"data\": {\n        \"name\": \"Classic Speaker 705\",\n        \"price\": 108.2,\n        \"stock\": 26,\n        \"category\": \"Toys\",\n        \"description\": \"Premium Headphones 949 with durable materials.\"\n      }\n    },\n    {\n      \"id\": \"a6c7e966-b998-4c5d-8b49-30f7af5d7b7f\",\n      \"collection_id\": \"5f0746c4-bc86-48b5-a053-5e83403744d3\",\n      \"project_id\": 58528,\n      \"app_user_id\": null,\n      \"created_by\": 151710,\n      \"created_at\": \"2026-11-17T03:10:13.108Z\",\n      \"updated_at\": \"2026-11-17T03:10:13.108Z\",\n      \"deleted_at\": null,\n      \"data\": {\n        \"name\": \"Ergonomic Water Bottle 800\",\n        \"price\": 505.73,\n        \"stock\": 428,\n        \"category\": \"Office\",\n        \"description\": \"Ergonomic Water Bottle 800 with fast shipping.\"\n      }\n    }\n  ],\n  \"meta\": {\n    \"page\": 1,\n    \"limit\": 10,\n    \"total\": 2,\n    \"pages\": 1\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create record",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 201\", () => pm.response.to.have.status(201));\npm.test(\"Response has data\", () => pm.expect(pm.response.json()).to.have.property(\"data\"));\n\n// Save dynamic values\nif (pm.response.code === 201) {\n  const json = pm.response.json();\n  pm.environment.set(\"recordId\", json.data.id);\n}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{manageKey}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"name\": \"{{randName}}\",\n    \"price\": {{randPrice}},\n    \"stock\": {{randStock}},\n    \"category\": \"{{randCategory}}\",\n    \"description\": \"{{randDescription}}\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/collections/products/records",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "collections",
+                "products",
+                "records"
+              ]
+            },
+            "description": "Body must be wrapped in a \"data\" object or the API returns 400."
+          },
+          "response": [
+            {
+              "name": "Success Create record",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "{{manageKey}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"name\": \"{{randName}}\",\n    \"price\": {{randPrice}},\n    \"stock\": {{randStock}},\n    \"category\": \"{{randCategory}}\",\n    \"description\": \"{{randDescription}}\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "201"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:35:40 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "412"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"19c-t1TLq1w0+3NnnEsg7Btd8wsPtgs\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=YfwbcqWcKK81kSsSJ0u0w04Ru%2Fw9%2F%2F8DNNRgTH7MljI%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794886540\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=YfwbcqWcKK81kSsSJ0u0w04Ru%2Fw9%2F%2F8DNNRgTH7MljI%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794886540\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "161"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794960000"
+                },
+                {
+                  "key": "x-reqres-trial",
+                  "value": "true"
+                },
+                {
+                  "key": "x-reqres-trial-days-remaining",
+                  "value": "14"
+                },
+                {
+                  "key": "x-reqres-trial-expires",
+                  "value": "2026-12-01T01:07:34.341Z"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "2f45d868-fcee-ec42-b0cb-5d1aa54acb85"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbafcced9b8e57-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": {\n    \"id\": \"21927e8b-2b6a-4c61-bb37-611e804a5732\",\n    \"collection_id\": \"5f0746c4-bc86-48b5-a053-5e83403744d3\",\n    \"project_id\": 58528,\n    \"app_user_id\": null,\n    \"created_by\": 151710,\n    \"created_at\": \"2026-11-17T03:35:40.654Z\",\n    \"updated_at\": \"2026-11-17T03:35:40.654Z\",\n    \"deleted_at\": null,\n    \"data\": {\n      \"name\": \"Ultra Desk Lamp 295\",\n      \"price\": 518.66,\n      \"stock\": 173,\n      \"category\": \"Fitness\",\n      \"description\": \"Ultra Desk Lamp 295 with great battery life.\"\n    }\n  }\n}"
+            },
+            {
+              "name": "Negative Create record (Missing API)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "{{manageKey}}",
+                    "disabled": true
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"name\": \"{{randName}}\",\n    \"price\": {{randPrice}},\n    \"stock\": {{randStock}},\n    \"category\": \"{{randCategory}}\",\n    \"description\": \"{{randDescription}}\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "401"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:36:32 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "992"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"3e0-E4FcfUYoSVptYLUiHnwU7IVt9mk\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=YLUP%2BgHpI%2BthX771jmJ5rny%2Fdn%2BfAKmNtDjwDjmDQzg%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794886592\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=YLUP%2BgHpI%2BthX771jmJ5rny%2Fdn%2BfAKmNtDjwDjmDQzg%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794886592\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-reqres-help",
+                  "value": "missing_api_key"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "d678eb2a-9719-8971-3b42-20072296eaeb"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbb114af308e57-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"missing_api_key\",\n  \"message\": \"The x-api-key header is required for this endpoint.\",\n  \"hint\": \"Send x-api-key for admin calls (/api/*) or Authorization: Bearer <token> for app-user calls (/app/*).\",\n  \"next_steps\": [\n    \"No account? POST https://reqres.in/api/projects/sandbox (no auth, no signup) returns a working project with keys in one call\",\n    \"Or sign in at app.reqres.in/api-keys to get your key\",\n    \"Add header: x-api-key: <your_key>\",\n    \"For app user endpoints, use Authorization: Bearer <session_token> instead\"\n  ],\n  \"docs_url\": \"https://reqres.in/docs#authentication\",\n  \"example_curl\": \"curl -H \\\"x-api-key: YOUR_API_KEY\\\" https://reqres.in/api/collections\",\n  \"_meta\": {\n    \"powered_by\": \"ReqRes\",\n    \"docs_url\": \"https://reqres.in/docs\",\n    \"upgrade_url\": \"https://app.reqres.in/upgrade\",\n    \"example_url\": \"https://reqres.in/docs#example-app\",\n    \"variant\": \"v1_a\",\n    \"message\": \"API key invalid or revoked. Create a new key in API Keys.\",\n    \"cta\": {\n      \"label\": \"Get a key\",\n      \"url\": \"https://app.reqres.in/api-keys\"\n    },\n    \"context\": \"invalid_key\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get single record",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 200\", () => pm.response.to.have.status(200));\n\nconst json = pm.response.json();\npm.test(\"Response has data\", () => pm.expect(json).to.have.property(\"data\"));\npm.test(\"data.id matches recordId\", () => {\n  pm.expect(String(json.data.id)).to.eql(String(pm.environment.get(\"recordId\")));\n});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{manageKey}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/collections/products/records/{{recordId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "collections",
+                "products",
+                "records",
+                "{{recordId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Success Get single record",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "{{manageKey}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records/{{recordId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records",
+                    "{{recordId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "200"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:37:20 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"197-wO8Bl5mVBt2M319lGWpqO72b9Rw\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=PNv75PxQeG4F5bwVm2Y3LL%2F4Lxpy2hGFGLNJoAJL1mc%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794886640\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=PNv75PxQeG4F5bwVm2Y3LL%2F4Lxpy2hGFGLNJoAJL1mc%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794886640\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "159"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794960000"
+                },
+                {
+                  "key": "x-reqres-trial",
+                  "value": "true"
+                },
+                {
+                  "key": "x-reqres-trial-days-remaining",
+                  "value": "14"
+                },
+                {
+                  "key": "x-reqres-trial-expires",
+                  "value": "2026-12-01T01:07:34.341Z"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "fa30698b-4feb-6045-d8ba-47c6f557ca64"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "BYPASS"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbb2403c3d8e57-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": {\n    \"id\": \"f97b04f0-28b5-483e-b37e-d5746680feec\",\n    \"collection_id\": \"5f0746c4-bc86-48b5-a053-5e83403744d3\",\n    \"project_id\": 58528,\n    \"app_user_id\": null,\n    \"created_by\": 151710,\n    \"created_at\": \"2026-11-17T03:36:24.412Z\",\n    \"updated_at\": \"2026-11-17T03:36:24.412Z\",\n    \"deleted_at\": null,\n    \"data\": {\n      \"name\": \"Smart Keyboard 304\",\n      \"price\": 549.4,\n      \"stock\": 41,\n      \"category\": \"Office\",\n      \"description\": \"Smart Keyboard 304 with great battery life.\"\n    }\n  }\n}"
+            },
+            {
+              "name": "Negative Get single record",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "{{manageKey}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records/{{recordId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records",
+                    "{{recordId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "404"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:38:06 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"129-8j59USv1nZVG7ZwcCRzgXt4KyPg\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=56D11lFoeYOAvASD0tqbFTOuYiXbGh0axqcSf3vz24Y%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794886686\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=56D11lFoeYOAvASD0tqbFTOuYiXbGh0axqcSf3vz24Y%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794886686\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "157"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794960000"
+                },
+                {
+                  "key": "x-reqres-trial",
+                  "value": "true"
+                },
+                {
+                  "key": "x-reqres-trial-days-remaining",
+                  "value": "14"
+                },
+                {
+                  "key": "x-reqres-trial-expires",
+                  "value": "2026-12-01T01:07:34.341Z"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "da1579c3-f4b9-01d2-b725-481c75d79cde"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "BYPASS"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbb35bdbaa8e57-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"record_not_found\",\n  \"message\": \"Record not found.\",\n  \"hint\": \"Verify the record ID and collection slug.\",\n  \"next_steps\": [\n    \"List records: GET /api/collections/:slug/records\",\n    \"Check the record ID is a valid UUID\",\n    \"Ensure the record hasn't been deleted\"\n  ],\n  \"docs_url\": \"https://reqres.in/docs#records\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update record (PUT)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 200\", () => pm.response.to.have.status(200));\npm.test(\"Response has data\", () => pm.expect(pm.response.json()).to.have.property(\"data\"));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "<<manageKey>>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"name\": \"{{randName}}\",\n    \"price\": {{randPrice}},\n    \"stock\": {{randStock}},\n    \"category\": \"{{randCategory}}\",\n    \"description\": \"{{randDescription}}\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/collections/products/records/{{recordId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "collections",
+                "products",
+                "records",
+                "{{recordId}}"
+              ]
+            },
+            "description": "PUT replaces the whole record data, so send every field."
+          },
+          "response": [
+            {
+              "name": "Success Update record (PUT)",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "<<manageKey>>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"name\": \"{{randName}}\",\n    \"price\": {{randPrice}},\n    \"stock\": {{randStock}},\n    \"category\": \"{{randCategory}}\",\n    \"description\": \"{{randDescription}}\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records/{{recordId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records",
+                    "{{recordId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "200"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:40:15 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"19d-343cu6rBbdb+DgacM4p9eViNO30\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=b4sN38lnsNN7XV8IAxs%2BAJq8WD2gXmAtzvUUYKdhCTY%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794886815\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=b4sN38lnsNN7XV8IAxs%2BAJq8WD2gXmAtzvUUYKdhCTY%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794886815\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "152"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794960000"
+                },
+                {
+                  "key": "x-reqres-trial",
+                  "value": "true"
+                },
+                {
+                  "key": "x-reqres-trial-days-remaining",
+                  "value": "14"
+                },
+                {
+                  "key": "x-reqres-trial-expires",
+                  "value": "2026-12-01T01:07:34.341Z"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "73382f2c-cb0c-42a9-411a-293b9dea45a3"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbb6861a800c4d-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": {\n    \"id\": \"8f000c80-7fc7-4e8b-ac4f-a41b8488f7d7\",\n    \"collection_id\": \"5f0746c4-bc86-48b5-a053-5e83403744d3\",\n    \"project_id\": 58528,\n    \"app_user_id\": null,\n    \"created_by\": 151710,\n    \"created_at\": \"2026-11-17T03:40:00.280Z\",\n    \"updated_at\": \"2026-11-17T03:40:15.808Z\",\n    \"deleted_at\": null,\n    \"data\": {\n      \"name\": \"Compact Keyboard 603\",\n      \"price\": 499.42,\n      \"stock\": 368,\n      \"category\": \"Fitness\",\n      \"description\": \"Compact Keyboard 603 with durable materials.\"\n    }\n  }\n}"
+            },
+            {
+              "name": "Negative Update record (PUT)",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "<<manageKey>>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"name\": \"{{randName}}\",\n    \"price\": {{randPrice}},\n    \"stock\": {{randStock}},\n    \"category\": \"{{randCategory}}\",\n    \n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records/{{recordId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records",
+                    "{{recordId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "400"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:40:52 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "623"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"26f-nZX2dPyCp6KQGulM8ppW+0+YFBo\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=lvsFSCVykp%2BrN%2F9SsIZx18079qMh5Rd3mk7Xn1weT%2BE%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794886852\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=lvsFSCVykp%2BrN%2F9SsIZx18079qMh5Rd3mk7Xn1weT%2BE%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794886852\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "748047cd-81c6-b172-1e25-e096223cc579"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbb76cdc030c4d-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"invalid_json\",\n  \"message\": \"The request body contains invalid JSON.\",\n  \"details\": \"Expected double-quoted property name in JSON at position 118\",\n  \"action\": \"Send well-formed JSON with Content-Type: application/json. If you meant form data, set the correct Content-Type.\",\n  \"docs_url\": \"https://reqres.in/documentation#requests\",\n  \"example\": \"curl -X POST https://reqres.in/api/users \\\\ \\n  -H \\\"Content-Type: application/json\\\" \\\\ \\n  -d \\\"{ \\\\\\\"name\\\\\\\": \\\\\\\"morpheus\\\\\\\" }\\\"\",\n  \"requestId\": \"748047cd-81c6-b172-1e25-e096223cc579\",\n  \"bodyInfo\": {\n    \"length\": 121,\n    \"preview\": \"{\\n  \\\"data\\\": {\\n    \\\"name\\\": \\\"Smart Keyboard 459\\\",\\n  \"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update record (PATCH)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 200\", () => pm.response.to.have.status(200));\npm.test(\"Response has data\", () => pm.expect(pm.response.json()).to.have.property(\"data\"));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "<<manageKey>>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"name\": \"{{randName}}\",\n    \"price\": {{randPrice}},\n    \"stock\": {{randStock}}\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/collections/products/records/{{recordId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "collections",
+                "products",
+                "records",
+                "{{recordId}}"
+              ]
+            },
+            "description": "PUT replaces the whole record data, so send every field."
+          },
+          "response": [
+            {
+              "name": "Success Update record (PATCH)",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "<<manageKey>>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"name\": \"{{randName}}\",\n    \"price\": {{randPrice}},\n    \"stock\": {{randStock}}\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records/{{recordId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records",
+                    "{{recordId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "200"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:41:27 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"19c-aTkE21mPIPgKNYiOcQkfiEM6q/0\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=WfuJ%2BRkgiM2kWf%2FVxUxxCBUz2hfyxhQcRChmn%2FgrDP8%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794886887\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=WfuJ%2BRkgiM2kWf%2FVxUxxCBUz2hfyxhQcRChmn%2FgrDP8%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794886887\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "151"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794960000"
+                },
+                {
+                  "key": "x-reqres-trial",
+                  "value": "true"
+                },
+                {
+                  "key": "x-reqres-trial-days-remaining",
+                  "value": "14"
+                },
+                {
+                  "key": "x-reqres-trial-expires",
+                  "value": "2026-12-01T01:07:34.341Z"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "913fb5ad-0c09-58ca-8783-034e9d5ed030"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbb8449ba40c4d-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"data\": {\n    \"id\": \"8f000c80-7fc7-4e8b-ac4f-a41b8488f7d7\",\n    \"collection_id\": \"5f0746c4-bc86-48b5-a053-5e83403744d3\",\n    \"project_id\": 58528,\n    \"app_user_id\": null,\n    \"created_by\": 151710,\n    \"created_at\": \"2026-11-17T03:40:00.280Z\",\n    \"updated_at\": \"2026-11-17T03:41:27.443Z\",\n    \"deleted_at\": null,\n    \"data\": {\n      \"name\": \"Eco Water Bottle 413\",\n      \"price\": 97.24,\n      \"stock\": 394,\n      \"category\": \"Fitness\",\n      \"description\": \"Compact Keyboard 603 with durable materials.\"\n    }\n  }\n}"
+            },
+            {
+              "name": "Negative Update record (PATCH)",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "<<manageKey>>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"name\": \"{{randName}}\",\n    \"price\": {{randPrice}},\n    \"stock\": {{randStock}}\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records/{{recordId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records",
+                    "{{recordId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "404"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:41:54 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"129-8j59USv1nZVG7ZwcCRzgXt4KyPg\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=k00san0nq6ZsJGKcG3gWQ27SHZCFnRAoZnUuDDAftoo%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794886913\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=k00san0nq6ZsJGKcG3gWQ27SHZCFnRAoZnUuDDAftoo%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794886913\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "149"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794960000"
+                },
+                {
+                  "key": "x-reqres-trial",
+                  "value": "true"
+                },
+                {
+                  "key": "x-reqres-trial-days-remaining",
+                  "value": "14"
+                },
+                {
+                  "key": "x-reqres-trial-expires",
+                  "value": "2026-12-01T01:07:34.341Z"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "c841ab8a-256f-765f-e568-8f869a8a4409"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbb8ebcca60c4d-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"record_not_found\",\n  \"message\": \"Record not found.\",\n  \"hint\": \"Verify the record ID and collection slug.\",\n  \"next_steps\": [\n    \"List records: GET /api/collections/:slug/records\",\n    \"Check the record ID is a valid UUID\",\n    \"Ensure the record hasn't been deleted\"\n  ],\n  \"docs_url\": \"https://reqres.in/docs#records\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete record",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 204\", () => pm.response.to.have.status(204));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "<<manageKey>>"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/collections/products/records/{{recordId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "collections",
+                "products",
+                "records",
+                "{{recordId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Negative Delete record",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "<<manageKey>>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records/{{recordId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records",
+                    "{{recordId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "404"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:42:41 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"129-8j59USv1nZVG7ZwcCRzgXt4KyPg\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=ZukM18nsXk2afmLiK1Cng86%2FCStZRt8UxGcdOYPVokc%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794886961\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=ZukM18nsXk2afmLiK1Cng86%2FCStZRt8UxGcdOYPVokc%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794886961\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "148"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794960000"
+                },
+                {
+                  "key": "x-reqres-trial",
+                  "value": "true"
+                },
+                {
+                  "key": "x-reqres-trial-days-remaining",
+                  "value": "14"
+                },
+                {
+                  "key": "x-reqres-trial-expires",
+                  "value": "2026-12-01T01:07:34.341Z"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "d47e7a10-5e99-e28d-a570-db359ceab8b6"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbba11ef2b0c4d-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"record_not_found\",\n  \"message\": \"Record not found.\",\n  \"hint\": \"Verify the record ID and collection slug.\",\n  \"next_steps\": [\n    \"List records: GET /api/collections/:slug/records\",\n    \"Check the record ID is a valid UUID\",\n    \"Ensure the record hasn't been deleted\"\n  ],\n  \"docs_url\": \"https://reqres.in/docs#records\"\n}"
+            },
+            {
+              "name": "Success Delete record",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "<<manageKey>>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records/{{recordId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records",
+                    "{{recordId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "204"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:43:22 GMT"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=ObbcqsdH%2F3ZaLW4PI%2FqZT5%2B74E7XZWhcOBe2YK3utjw%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794887002\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=ObbcqsdH%2F3ZaLW4PI%2FqZT5%2B74E7XZWhcOBe2YK3utjw%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794887002\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "146"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794960000"
+                },
+                {
+                  "key": "x-reqres-trial",
+                  "value": "true"
+                },
+                {
+                  "key": "x-reqres-trial-days-remaining",
+                  "value": "14"
+                },
+                {
+                  "key": "x-reqres-trial-expires",
+                  "value": "2026-12-01T01:07:34.341Z"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "78606037-e296-12f2-550b-45eb653612ce"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbbb15b8b40c4d-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Error Cases",
+      "item": [
+        {
+          "name": "No API key",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 401\", () => pm.response.to.have.status(401));\npm.test(\"Body has error field\", () => pm.expect(pm.response.json()).to.have.property(\"error\"));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/collections/products/records",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "collections",
+                "products",
+                "records"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "No API key",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "401"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:44:26 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "992"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"3e0-E4FcfUYoSVptYLUiHnwU7IVt9mk\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=x74iquS1qTPNlaiNL2vA8Ch4NfG0isNQ9EeuZY%2BXQrM%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794887066\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=x74iquS1qTPNlaiNL2vA8Ch4NfG0isNQ9EeuZY%2BXQrM%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794887066\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-reqres-help",
+                  "value": "missing_api_key"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "4bd140b4-5d4b-9fb5-d78d-f4846b716c67"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "BYPASS"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbbca0b859fe7a-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"missing_api_key\",\n  \"message\": \"The x-api-key header is required for this endpoint.\",\n  \"hint\": \"Send x-api-key for admin calls (/api/*) or Authorization: Bearer <token> for app-user calls (/app/*).\",\n  \"next_steps\": [\n    \"No account? POST https://reqres.in/api/projects/sandbox (no auth, no signup) returns a working project with keys in one call\",\n    \"Or sign in at app.reqres.in/api-keys to get your key\",\n    \"Add header: x-api-key: <your_key>\",\n    \"For app user endpoints, use Authorization: Bearer <session_token> instead\"\n  ],\n  \"docs_url\": \"https://reqres.in/docs#authentication\",\n  \"example_curl\": \"curl -H \\\"x-api-key: YOUR_API_KEY\\\" https://reqres.in/api/collections\",\n  \"_meta\": {\n    \"powered_by\": \"ReqRes\",\n    \"docs_url\": \"https://reqres.in/docs\",\n    \"upgrade_url\": \"https://app.reqres.in/upgrade\",\n    \"example_url\": \"https://reqres.in/docs#example-app\",\n    \"variant\": \"v1_a\",\n    \"message\": \"API key invalid or revoked. Create a new key in API Keys.\",\n    \"cta\": {\n      \"label\": \"Get a key\",\n      \"url\": \"https://app.reqres.in/api-keys\"\n    },\n    \"context\": \"invalid_key\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Invalid API key",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 401\", () => pm.response.to.have.status(401));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "invalid_key"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/collections/products/records",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "collections",
+                "products",
+                "records"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Invalid API key",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "invalid_key"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "403"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:44:34 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"2c2-m0mFaxYoixtJfu2ig3ee+D3uVe0\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=kJWVjnFtIxcOodJSJt1h405K4wyq1eURWl%2BeM5yEYoE%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794887074\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=kJWVjnFtIxcOodJSJt1h405K4wyq1eURWl%2BeM5yEYoE%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794887074\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-reqres-help",
+                  "value": "invalid_api_key"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "522f82b0-8003-986c-9269-71e1c501b2ca"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "BYPASS"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbbcd8fb6cfe7a-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"invalid_api_key\",\n  \"message\": \"This API key is not recognized or has been revoked.\",\n  \"hint\": \"Check that your API key is correct and not expired.\",\n  \"next_steps\": [\n    \"Verify the key in your dashboard at app.reqres.in/api-keys\",\n    \"Regenerate the key if needed\",\n    \"Ensure you're using the correct key type (manage/public)\"\n  ],\n  \"docs_url\": \"https://reqres.in/docs#api-keys\",\n  \"_meta\": {\n    \"powered_by\": \"ReqRes\",\n    \"docs_url\": \"https://reqres.in/docs\",\n    \"upgrade_url\": \"https://app.reqres.in/upgrade\",\n    \"example_url\": \"https://reqres.in/docs#example-app\",\n    \"variant\": \"v1_a\",\n    \"message\": \"API key invalid or revoked. Create a new key in API Keys.\",\n    \"cta\": {\n      \"label\": \"Get a key\",\n      \"url\": \"https://app.reqres.in/api-keys\"\n    },\n    \"context\": \"invalid_key\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Non-existent record",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 404\", () => pm.response.to.have.status(404));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "<<manageKey>>"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/collections/products/records/nonexistent_id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "collections",
+                "products",
+                "records",
+                "nonexistent_id"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Non-existent record",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "<<manageKey>>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records/nonexistent_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records",
+                    "nonexistent_id"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "404"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:44:52 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "access-control-expose-headers",
+                  "value": "Retry-After,X-Request-ID,Link,X-Total-Count,RateLimit-Limit,RateLimit-Remaining,RateLimit-Reset,RateLimit-Policy,X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"129-8j59USv1nZVG7ZwcCRzgXt4KyPg\""
+                },
+                {
+                  "key": "link",
+                  "value": "<https://reqres.in/openapi.json>; rel=\"service-desc\", <https://reqres.in/docs>; rel=\"service-doc\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=sl1ZLYYOtiGfjc3PN1woN%2BcX7AfAOLUKZOGXHGv9KcY%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794887092\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=sl1ZLYYOtiGfjc3PN1woN%2BcX7AfAOLUKZOGXHGv9KcY%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794887092\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "250"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "145"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1794960000"
+                },
+                {
+                  "key": "x-reqres-trial",
+                  "value": "true"
+                },
+                {
+                  "key": "x-reqres-trial-days-remaining",
+                  "value": "14"
+                },
+                {
+                  "key": "x-reqres-trial-expires",
+                  "value": "2026-12-01T01:07:34.341Z"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "75ab8747-bada-463d-c23d-4ce1dfd6b3ce"
+                },
+                {
+                  "key": "x-robots-tag",
+                  "value": "noindex, nofollow"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "BYPASS"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbbd44fcd4fe7a-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"record_not_found\",\n  \"message\": \"Record not found.\",\n  \"hint\": \"Verify the record ID and collection slug.\",\n  \"next_steps\": [\n    \"List records: GET /api/collections/:slug/records\",\n    \"Check the record ID is a valid UUID\",\n    \"Ensure the record hasn't been deleted\"\n  ],\n  \"docs_url\": \"https://reqres.in/docs#records\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Invalid request body",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 400\", () => pm.response.to.have.status(400));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "<<manageKey>>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"data\": { \"name\": \"{{randName}}\", \"price\": {{randPrice}}, \"stock\": {{randStock}}, \"category\": \"{{randCategory}}\", \"description\": \"{{randDescription}}\"",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/collections/products/records",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "collections",
+                "products",
+                "records"
+              ]
+            },
+            "description": "Deliberately malformed JSON."
+          },
+          "response": [
+            {
+              "name": "Invalid request body",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "x-api-key",
+                    "value": "<<manageKey>>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{ \"data\": { \"name\": \"{{randName}}\", \"price\": {{randPrice}}, \"stock\": {{randStock}}, \"category\": \"{{randCategory}}\", \"description\": \"{{randDescription}}\"",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/collections/products/records",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "collections",
+                    "products",
+                    "records"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": "400"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 17 Nov 2026 03:45:06 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "626"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "cross-origin"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"272-pGU+sqkmZBjO2uRnLnVvH/fvL9c\""
+                },
+                {
+                  "key": "nel",
+                  "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "report-to",
+                  "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=j47JEo%2FlxGnqvznTtWm9ZUp6v5e%2BWFsFWgElxTVY%2FXM%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1794887105\"}],\"max_age\":3600}"
+                },
+                {
+                  "key": "reporting-endpoints",
+                  "value": "heroku-nel=\"https://nel.heroku.com/reports?s=j47JEo%2FlxGnqvznTtWm9ZUp6v5e%2BWFsFWgElxTVY%2FXM%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1794887105\""
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 heroku-router"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-request-id",
+                  "value": "72fe05cf-1bbb-5174-a273-6ffab22a3db2"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a5bbbd9a9a39fe7a-KTM"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"invalid_json\",\n  \"message\": \"The request body contains invalid JSON.\",\n  \"details\": \"Expected ',' or '}' after property value in JSON at position 155\",\n  \"action\": \"Send well-formed JSON with Content-Type: application/json. If you meant form data, set the correct Content-Type.\",\n  \"docs_url\": \"https://reqres.in/documentation#requests\",\n  \"example\": \"curl -X POST https://reqres.in/api/users \\\\ \\n  -H \\\"Content-Type: application/json\\\" \\\\ \\n  -d \\\"{ \\\\\\\"name\\\\\\\": \\\\\\\"morpheus\\\\\\\" }\\\"\",\n  \"requestId\": \"72fe05cf-1bbb-5174-a273-6ffab22a3db2\",\n  \"bodyInfo\": {\n    \"length\": 155,\n    \"preview\": \"{ \\\"data\\\": { \\\"name\\\": \\\"Ultra Desk Lamp 353\\\", \\\"price\\\"\"\n  }\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{manageKey}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Random product data for request bodies (local variables, nothing saved to the environment)",
+          "const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];",
+          "const int = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;",
+          "",
+          "const adjectives = [\"Ergonomic\", \"Compact\", \"Premium\", \"Wireless\", \"Portable\", \"Rugged\", \"Smart\", \"Classic\", \"Ultra\", \"Eco\"];",
+          "const items = [\"Keyboard\", \"Backpack\", \"Desk Lamp\", \"Water Bottle\", \"Headphones\", \"Webcam\", \"Notebook\", \"Phone Stand\", \"Speaker\", \"Monitor Arm\"];",
+          "const categories = [\"Electronics\", \"Accessories\", \"Office\", \"Home\", \"Outdoors\", \"Fitness\", \"Books\", \"Toys\"];",
+          "const features = [\"durable materials\", \"a one-year warranty\", \"fast shipping\", \"a minimalist design\", \"easy setup\", \"great battery life\"];",
+          "",
+          "const name = pick(adjectives) + \" \" + pick(items) + \" \" + int(100, 999);",
+          "pm.variables.set(\"randName\", name);",
+          "pm.variables.set(\"randPrice\", (int(199, 99999) / 100).toFixed(2));",
+          "pm.variables.set(\"randStock\", int(0, 500));",
+          "pm.variables.set(\"randCategory\", pick(categories));",
+          "pm.variables.set(\"randDescription\", name + \" with \" + pick(features) + \".\");"
+        ]
+      }
+    }
+  ]
+}
