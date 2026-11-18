@@ -1,0 +1,21 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1794970300618,783,20 No API key (expect 401),401,Unauthorized,TG3 - Error handling (4xx checks) 1-1,text,true,,2697,146,1,1,https://reqres.in/api/collections/products/records,777,0,389
+1794970302193,215,21 Invalid API key (expect 401/403),403,Forbidden,TG3 - Error handling (4xx checks) 1-1,text,true,,2400,170,1,1,https://reqres.in/api/collections/products/records,215,0,0
+1794970303258,414,22 Non-existent record (expect 404),404,Not Found,TG3 - Error handling (4xx checks) 1-1,text,true,,2144,226,1,1,https://reqres.in/api/collections/products/records/nonexistent_id,414,0,0
+1794970304188,366,23 Malformed JSON body (expect 400),400,Bad Request,TG3 - Error handling (4xx checks) 1-1,text,true,,1889,391,1,1,https://reqres.in/api/collections/products/records,366,0,0
+1794970305383,199,20 No API key (expect 401),401,Unauthorized,TG3 - Error handling (4xx checks) 1-1,text,true,,2697,146,1,1,https://reqres.in/api/collections/products/records,199,0,0
+1794970306150,218,21 Invalid API key (expect 401/403),403,Forbidden,TG3 - Error handling (4xx checks) 1-1,text,true,,2408,170,1,1,https://reqres.in/api/collections/products/records,217,0,0
+1794970306818,202,22 Non-existent record (expect 404),404,Not Found,TG3 - Error handling (4xx checks) 1-1,text,true,,2144,226,1,1,https://reqres.in/api/collections/products/records/nonexistent_id,202,0,0
+1794970307905,203,23 Malformed JSON body (expect 400),400,Bad Request,TG3 - Error handling (4xx checks) 1-1,text,true,,1901,391,1,1,https://reqres.in/api/collections/products/records,203,0,0
+1794970308478,202,20 No API key (expect 401),401,Unauthorized,TG3 - Error handling (4xx checks) 1-1,text,true,,2689,146,1,1,https://reqres.in/api/collections/products/records,202,0,0
+1794970309373,216,21 Invalid API key (expect 401/403),403,Forbidden,TG3 - Error handling (4xx checks) 1-1,text,true,,2400,170,1,1,https://reqres.in/api/collections/products/records,216,0,0
+1794970310265,204,22 Non-existent record (expect 404),404,Not Found,TG3 - Error handling (4xx checks) 1-1,text,true,,2148,226,1,1,https://reqres.in/api/collections/products/records/nonexistent_id,203,0,0
+1794970311454,191,23 Malformed JSON body (expect 400),400,Bad Request,TG3 - Error handling (4xx checks) 1-1,text,true,,1889,391,1,1,https://reqres.in/api/collections/products/records,190,0,0
+1794970312245,203,20 No API key (expect 401),401,Unauthorized,TG3 - Error handling (4xx checks) 1-1,text,true,,2685,146,1,1,https://reqres.in/api/collections/products/records,203,0,0
+1794970312980,215,21 Invalid API key (expect 401/403),403,Forbidden,TG3 - Error handling (4xx checks) 1-1,text,true,,2408,170,1,1,https://reqres.in/api/collections/products/records,215,0,0
+1794970313832,201,22 Non-existent record (expect 404),404,Not Found,TG3 - Error handling (4xx checks) 1-1,text,true,,2144,226,1,1,https://reqres.in/api/collections/products/records/nonexistent_id,201,0,0
+1794970314530,192,23 Malformed JSON body (expect 400),400,Bad Request,TG3 - Error handling (4xx checks) 1-1,text,true,,1893,391,1,1,https://reqres.in/api/collections/products/records,192,0,0
+1794970315584,202,20 No API key (expect 401),401,Unauthorized,TG3 - Error handling (4xx checks) 1-1,text,true,,2685,146,1,1,https://reqres.in/api/collections/products/records,201,0,0
+1794970316441,215,21 Invalid API key (expect 401/403),403,Forbidden,TG3 - Error handling (4xx checks) 1-1,text,true,,2400,170,1,1,https://reqres.in/api/collections/products/records,215,0,0
+1794970317431,208,22 Non-existent record (expect 404),404,Not Found,TG3 - Error handling (4xx checks) 1-1,text,true,,2156,226,1,1,https://reqres.in/api/collections/products/records/nonexistent_id,208,0,0
+1794970318345,193,23 Malformed JSON body (expect 400),400,Bad Request,TG3 - Error handling (4xx checks) 1-1,text,true,,1901,391,1,1,https://reqres.in/api/collections/products/records,192,0,0

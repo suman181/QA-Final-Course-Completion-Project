@@ -1,0 +1,21 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1794969925258,772,20 No API key (expect 401),401,Unauthorized,TG3 - Error handling (4xx checks) 1-1,text,false,,2689,146,1,1,https://reqres.in/api/collections/products/records,766,0,333
+1794969926489,214,21 Invalid API key (expect 401),403,Forbidden,TG3 - Error handling (4xx checks) 1-1,text,false,Test failed: code expected to match /^401$/,2396,170,1,1,https://reqres.in/api/collections/products/records,214,0,0
+1794969927452,395,22 Non-existent record (expect 404),404,Not Found,TG3 - Error handling (4xx checks) 1-1,text,false,,2152,226,1,1,https://reqres.in/api/collections/products/records/nonexistent_id,395,0,0
+1794969928424,401,23 Malformed JSON body (expect 400),400,Bad Request,TG3 - Error handling (4xx checks) 1-1,text,false,,1889,391,1,1,https://reqres.in/api/collections/products/records,401,0,0
+1794969929758,200,20 No API key (expect 401),401,Unauthorized,TG3 - Error handling (4xx checks) 1-1,text,false,,2689,146,1,1,https://reqres.in/api/collections/products/records,200,0,0
+1794969930653,216,21 Invalid API key (expect 401),403,Forbidden,TG3 - Error handling (4xx checks) 1-1,text,false,Test failed: code expected to match /^401$/,2400,170,1,1,https://reqres.in/api/collections/products/records,216,0,0
+1794969931250,209,22 Non-existent record (expect 404),404,Not Found,TG3 - Error handling (4xx checks) 1-1,text,false,,2148,226,1,1,https://reqres.in/api/collections/products/records/nonexistent_id,209,0,0
+1794969932440,195,23 Malformed JSON body (expect 400),400,Bad Request,TG3 - Error handling (4xx checks) 1-1,text,false,,1897,391,1,1,https://reqres.in/api/collections/products/records,195,0,0
+1794969933379,199,20 No API key (expect 401),401,Unauthorized,TG3 - Error handling (4xx checks) 1-1,text,false,,2689,146,1,1,https://reqres.in/api/collections/products/records,199,0,0
+1794969933894,216,21 Invalid API key (expect 401),403,Forbidden,TG3 - Error handling (4xx checks) 1-1,text,false,Test failed: code expected to match /^401$/,2400,170,1,1,https://reqres.in/api/collections/products/records,216,0,0
+1794969934946,210,22 Non-existent record (expect 404),404,Not Found,TG3 - Error handling (4xx checks) 1-1,text,false,,2152,226,1,1,https://reqres.in/api/collections/products/records/nonexistent_id,210,0,0
+1794969935696,199,23 Malformed JSON body (expect 400),400,Bad Request,TG3 - Error handling (4xx checks) 1-1,text,false,,1889,391,1,1,https://reqres.in/api/collections/products/records,198,0,0
+1794969936760,205,20 No API key (expect 401),401,Unauthorized,TG3 - Error handling (4xx checks) 1-1,text,false,,2693,146,1,1,https://reqres.in/api/collections/products/records,205,0,0
+1794969937635,213,21 Invalid API key (expect 401),403,Forbidden,TG3 - Error handling (4xx checks) 1-1,text,false,Test failed: code expected to match /^401$/,2396,170,1,1,https://reqres.in/api/collections/products/records,212,0,0
+1794969938452,209,22 Non-existent record (expect 404),404,Not Found,TG3 - Error handling (4xx checks) 1-1,text,false,,2148,226,1,1,https://reqres.in/api/collections/products/records/nonexistent_id,209,0,0
+1794969939593,196,23 Malformed JSON body (expect 400),400,Bad Request,TG3 - Error handling (4xx checks) 1-1,text,false,,1901,391,1,1,https://reqres.in/api/collections/products/records,196,0,0
+1794969940620,213,20 No API key (expect 401),401,Unauthorized,TG3 - Error handling (4xx checks) 1-1,text,false,,2685,146,1,1,https://reqres.in/api/collections/products/records,213,0,0
+1794969941215,213,21 Invalid API key (expect 401),403,Forbidden,TG3 - Error handling (4xx checks) 1-1,text,false,Test failed: code expected to match /^401$/,2396,170,1,1,https://reqres.in/api/collections/products/records,213,0,0
+1794969942084,213,22 Non-existent record (expect 404),404,Not Found,TG3 - Error handling (4xx checks) 1-1,text,false,,2152,226,1,1,https://reqres.in/api/collections/products/records/nonexistent_id,213,0,0
+1794969942887,197,23 Malformed JSON body (expect 400),400,Bad Request,TG3 - Error handling (4xx checks) 1-1,text,false,,1889,391,1,1,https://reqres.in/api/collections/products/records,197,0,0

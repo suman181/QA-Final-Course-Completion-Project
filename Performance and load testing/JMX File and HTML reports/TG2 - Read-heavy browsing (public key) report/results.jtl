@@ -1,0 +1,63 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1794968862651,739,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,4270,237,1,1,https://reqres.in/api/collections/products/records?page=1&limit=30,730,0,337
+1794968864016,422,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,2281,258,1,1,https://reqres.in/api/collections/products/records/c9291576-5f47-4799-a361-eea061e4ffbe,422,0,0
+1794968864810,411,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,1929,237,2,2,https://reqres.in/api/collections/products/records?page=3&limit=24,411,0,0
+1794968865674,380,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,1925,237,2,2,https://reqres.in/api/collections/products/records?page=3&limit=27,380,0,0
+1794968866032,428,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,4266,237,2,2,https://reqres.in/api/collections/products/records?page=1&limit=22,427,0,47
+1794968866868,202,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,4262,237,2,2,https://reqres.in/api/collections/products/records?page=1&limit=32,201,0,0
+1794968867401,204,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,2263,258,2,2,https://reqres.in/api/collections/products/records/c9291576-5f47-4799-a361-eea061e4ffbe,204,0,0
+1794968867829,201,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,2276,258,2,2,https://reqres.in/api/collections/products/records/37580f69-91cd-49f7-9082-3922ea3939d8,201,0,0
+1794968868372,432,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,1929,237,3,3,https://reqres.in/api/collections/products/records?page=2&limit=40,432,0,0
+1794968868587,390,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,1929,237,3,3,https://reqres.in/api/collections/products/records?page=2&limit=12,390,0,0
+1794968869410,213,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,4270,237,3,3,https://reqres.in/api/collections/products/records?page=1&limit=33,212,0,0
+1794968869412,443,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,1929,237,3,3,https://reqres.in/api/collections/products/records?page=2&limit=17,443,0,45
+1794968869716,206,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,4248,237,3,3,https://reqres.in/api/collections/products/records?page=1&limit=22,205,0,0
+1794968870242,200,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,1929,237,3,3,https://reqres.in/api/collections/products/records?page=2&limit=35,199,0,0
+1794968870254,365,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,2250,258,3,3,https://reqres.in/api/collections/products/records/37580f69-91cd-49f7-9082-3922ea3939d8,365,0,0
+1794968870255,369,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,2250,258,3,3,https://reqres.in/api/collections/products/records/37580f69-91cd-49f7-9082-3922ea3939d8,369,0,0
+1794968871079,200,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,4240,237,3,3,https://reqres.in/api/collections/products/records?page=1&limit=10,199,0,0
+1794968871340,198,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,4262,237,3,3,https://reqres.in/api/collections/products/records?page=1&limit=17,197,0,0
+1794968871288,394,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,1921,237,3,3,https://reqres.in/api/collections/products/records?page=3&limit=41,394,0,0
+1794968872044,194,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,2250,258,3,3,https://reqres.in/api/collections/products/records/37580f69-91cd-49f7-9082-3922ea3939d8,194,0,0
+1794968872369,202,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,2253,258,3,3,https://reqres.in/api/collections/products/records/21927e8b-2b6a-4c61-bb37-611e804a5732,202,0,0
+1794968872253,382,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,1929,237,3,3,https://reqres.in/api/collections/products/records?page=3&limit=46,382,0,0
+1794968872596,210,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,1929,237,3,3,https://reqres.in/api/collections/products/records?page=2&limit=26,210,0,0
+1794968873032,201,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,1929,237,3,3,https://reqres.in/api/collections/products/records?page=3&limit=16,201,0,0
+1794968873063,204,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,1929,237,3,3,https://reqres.in/api/collections/products/records?page=3&limit=22,204,0,0
+1794968873490,206,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,1921,237,3,3,https://reqres.in/api/collections/products/records?page=2&limit=37,206,0,0
+1794968874016,207,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,1921,237,3,3,https://reqres.in/api/collections/products/records?page=2&limit=33,207,0,0
+1794968874047,206,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,4262,237,3,3,https://reqres.in/api/collections/products/records?page=1&limit=20,203,0,0
+1794968874158,203,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,4262,237,3,3,https://reqres.in/api/collections/products/records?page=1&limit=36,203,0,0
+1794968874861,210,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,2569,258,3,3,https://reqres.in/api/collections/products/records/54ffe62d-4254-4490-aa8c-a43664c6c8f3,210,0,0
+1794968875003,202,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,2291,258,3,3,https://reqres.in/api/collections/products/records/a6c7e966-b998-4c5d-8b49-30f7af5d7b7f,201,0,0
+1794968875128,209,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,4270,237,3,3,https://reqres.in/api/collections/products/records?page=1&limit=49,208,0,0
+1794968875425,205,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,4266,237,3,3,https://reqres.in/api/collections/products/records?page=1&limit=38,205,0,0
+1794968875615,201,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,4266,237,3,3,https://reqres.in/api/collections/products/records?page=1&limit=31,200,0,0
+1794968875864,200,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,2265,258,3,3,https://reqres.in/api/collections/products/records/a6c7e966-b998-4c5d-8b49-30f7af5d7b7f,199,0,0
+1794968876256,202,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,2254,258,3,3,https://reqres.in/api/collections/products/records/37580f69-91cd-49f7-9082-3922ea3939d8,202,0,0
+1794968876396,198,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,2250,258,3,3,https://reqres.in/api/collections/products/records/37580f69-91cd-49f7-9082-3922ea3939d8,198,0,0
+1794968876708,210,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,4262,237,3,3,https://reqres.in/api/collections/products/records?page=1&limit=26,209,0,0
+1794968877302,206,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,1921,237,3,3,https://reqres.in/api/collections/products/records?page=3&limit=10,206,0,0
+1794968877582,202,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,1925,237,3,3,https://reqres.in/api/collections/products/records?page=3&limit=11,202,0,0
+1794968877676,208,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,2565,258,3,3,https://reqres.in/api/collections/products/records/54ffe62d-4254-4490-aa8c-a43664c6c8f3,207,0,0
+1794968878484,204,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,1903,237,3,3,https://reqres.in/api/collections/products/records?page=3&limit=27,204,0,0
+1794968878659,200,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,1925,237,3,3,https://reqres.in/api/collections/products/records?page=3&limit=19,200,0,0
+1794968878766,202,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,1925,237,3,3,https://reqres.in/api/collections/products/records?page=2&limit=15,202,0,0
+1794968879089,205,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,4244,237,3,3,https://reqres.in/api/collections/products/records?page=1&limit=32,204,0,0
+1794968879298,205,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,1925,237,3,3,https://reqres.in/api/collections/products/records?page=3&limit=39,205,0,0
+1794968879637,208,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,2561,258,3,3,https://reqres.in/api/collections/products/records/54ffe62d-4254-4490-aa8c-a43664c6c8f3,208,0,0
+1794968879807,214,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,1921,237,3,3,https://reqres.in/api/collections/products/records?page=3&limit=49,214,0,0
+1794968880174,211,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,1921,237,3,3,https://reqres.in/api/collections/products/records?page=2&limit=45,211,0,0
+1794968880306,206,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-1,text,true,,1899,237,3,3,https://reqres.in/api/collections/products/records?page=3&limit=39,206,0,0
+1794968880789,201,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,4278,237,2,2,https://reqres.in/api/collections/products/records?page=1&limit=48,201,0,0
+1794968881107,242,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,1937,237,2,2,https://reqres.in/api/collections/products/records?page=3&limit=48,242,0,0
+1794968881418,207,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,2273,258,2,2,https://reqres.in/api/collections/products/records/21927e8b-2b6a-4c61-bb37-611e804a5732,206,0,0
+1794968882066,273,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,4282,237,2,2,https://reqres.in/api/collections/products/records?page=1&limit=28,272,0,0
+1794968882138,205,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,4282,237,2,2,https://reqres.in/api/collections/products/records?page=1&limit=19,205,0,0
+1794968882778,207,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,2569,258,2,2,https://reqres.in/api/collections/products/records/54ffe62d-4254-4490-aa8c-a43664c6c8f3,207,0,0
+1794968882856,197,11 Get single record,200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,2258,258,2,2,https://reqres.in/api/collections/products/records/37580f69-91cd-49f7-9082-3922ea3939d8,197,0,0
+1794968883564,225,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,1925,237,2,2,https://reqres.in/api/collections/products/records?page=2&limit=49,225,0,0
+1794968883647,204,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,1925,237,2,2,https://reqres.in/api/collections/products/records?page=3&limit=23,203,0,0
+1794968884219,200,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-3,text,true,,1925,237,2,2,https://reqres.in/api/collections/products/records?page=2&limit=28,200,0,0
+1794968884843,198,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,1929,237,1,1,https://reqres.in/api/collections/products/records?page=2&limit=32,198,0,0
+1794968885781,204,10 List records (random page),200,OK,TG2 - Read-heavy browsing (public key) 1-2,text,true,,1899,237,1,1,https://reqres.in/api/collections/products/records?page=3&limit=27,204,0,0

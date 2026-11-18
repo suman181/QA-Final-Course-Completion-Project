@@ -1,0 +1,51 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1794969391665,712,01 Create record,201,Created,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2285,508,1,1,https://reqres.in/api/collections/products/records,706,0,304
+1794969393382,386,02 Get single record,200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2305,306,2,2,https://reqres.in/api/collections/products/records/fca64187-08a0-4683-a88e-4eaea6aa7e03,386,0,0
+1794969394320,257,01 Create record,201,Created,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2289,508,2,2,https://reqres.in/api/collections/products/records,256,0,46
+1794969394772,212,03 Update record (PUT),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2274,541,2,2,https://reqres.in/api/collections/products/records/fca64187-08a0-4683-a88e-4eaea6aa7e03,212,0,0
+1794969395552,445,02 Get single record,200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2305,306,2,2,https://reqres.in/api/collections/products/records/135c7bcb-50ea-4eee-953b-90f2f1dfb4b5,445,0,0
+1794969395898,207,04 List records (page 1),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,5098,285,2,2,https://reqres.in/api/collections/products/records?page=1&limit=10,206,0,0
+1794969396402,221,03 Update record (PUT),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2286,545,2,2,https://reqres.in/api/collections/products/records/135c7bcb-50ea-4eee-953b-90f2f1dfb4b5,221,0,0
+1794969397078,210,05 Delete record,204,No Content,TG1 - Admin CRUD lifecycle (manage key) 1-1,,true,,1747,328,2,2,https://reqres.in/api/collections/products/records/fca64187-08a0-4683-a88e-4eaea6aa7e03,0,0,0
+1794969397189,204,04 List records (page 1),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,4676,285,2,2,https://reqres.in/api/collections/products/records?page=1&limit=10,204,0,0
+1794969398066,205,05 Delete record,204,No Content,TG1 - Admin CRUD lifecycle (manage key) 1-2,,true,,1743,328,2,2,https://reqres.in/api/collections/products/records/135c7bcb-50ea-4eee-953b-90f2f1dfb4b5,0,0,0
+1794969398200,372,01 Create record,201,Created,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2287,509,2,2,https://reqres.in/api/collections/products/records,372,0,0
+1794969399007,210,01 Create record,201,Created,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2286,508,2,2,https://reqres.in/api/collections/products/records,210,0,0
+1794969399440,391,02 Get single record,200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2307,306,2,2,https://reqres.in/api/collections/products/records/15d08a1a-7a4c-4805-a044-05da3c4843f7,390,0,0
+1794969399717,394,02 Get single record,200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2306,306,2,2,https://reqres.in/api/collections/products/records/6e0e96e1-8f0b-44e4-8091-cd217e689818,394,0,0
+1794969400442,217,03 Update record (PUT),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2293,552,2,2,https://reqres.in/api/collections/products/records/6e0e96e1-8f0b-44e4-8091-cd217e689818,217,0,0
+1794969400551,213,03 Update record (PUT),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2285,544,2,2,https://reqres.in/api/collections/products/records/15d08a1a-7a4c-4805-a044-05da3c4843f7,213,0,0
+1794969401281,207,04 List records (page 1),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,5110,285,2,2,https://reqres.in/api/collections/products/records?page=1&limit=10,206,0,0
+1794969401352,381,04 List records (page 1),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,5110,285,2,2,https://reqres.in/api/collections/products/records?page=1&limit=10,381,0,0
+1794969402302,201,05 Delete record,204,No Content,TG1 - Admin CRUD lifecycle (manage key) 1-1,,true,,1747,328,2,2,https://reqres.in/api/collections/products/records/15d08a1a-7a4c-4805-a044-05da3c4843f7,0,0,0
+1794969402396,208,05 Delete record,204,No Content,TG1 - Admin CRUD lifecycle (manage key) 1-2,,true,,1739,328,2,2,https://reqres.in/api/collections/products/records/6e0e96e1-8f0b-44e4-8091-cd217e689818,0,0,0
+1794969403103,204,01 Create record,201,Created,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2283,509,2,2,https://reqres.in/api/collections/products/records,204,0,0
+1794969403394,212,01 Create record,201,Created,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2286,508,2,2,https://reqres.in/api/collections/products/records,212,0,0
+1794969403688,206,02 Get single record,200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2303,306,2,2,https://reqres.in/api/collections/products/records/b689bee6-b147-4595-8683-63209d73d5c8,206,0,0
+1794969404368,416,02 Get single record,200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2306,306,2,2,https://reqres.in/api/collections/products/records/b73be8cd-c6c3-4f53-b39b-91e5db0334c5,416,0,0
+1794969404654,209,03 Update record (PUT),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2287,546,2,2,https://reqres.in/api/collections/products/records/b689bee6-b147-4595-8683-63209d73d5c8,209,0,0
+1794969405407,208,04 List records (page 1),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,5096,285,2,2,https://reqres.in/api/collections/products/records?page=1&limit=10,207,0,0
+1794969405576,206,03 Update record (PUT),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2273,540,2,2,https://reqres.in/api/collections/products/records/b73be8cd-c6c3-4f53-b39b-91e5db0334c5,206,0,0
+1794969406617,202,05 Delete record,204,No Content,TG1 - Admin CRUD lifecycle (manage key) 1-1,,true,,1739,328,2,2,https://reqres.in/api/collections/products/records/b689bee6-b147-4595-8683-63209d73d5c8,0,0,0
+1794969406700,205,04 List records (page 1),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,4663,285,2,2,https://reqres.in/api/collections/products/records?page=1&limit=10,204,0,0
+1794969407225,207,01 Create record,201,Created,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2281,507,2,2,https://reqres.in/api/collections/products/records,207,0,0
+1794969407742,199,05 Delete record,204,No Content,TG1 - Admin CRUD lifecycle (manage key) 1-2,,true,,1743,328,2,2,https://reqres.in/api/collections/products/records/b73be8cd-c6c3-4f53-b39b-91e5db0334c5,0,0,0
+1794969408060,206,02 Get single record,200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2301,306,2,2,https://reqres.in/api/collections/products/records/202084b9-c371-4a5f-8478-bd2b125c6a21,206,0,0
+1794969408637,210,01 Create record,201,Created,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2290,508,2,2,https://reqres.in/api/collections/products/records,210,0,0
+1794969408800,212,03 Update record (PUT),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2283,542,2,2,https://reqres.in/api/collections/products/records/202084b9-c371-4a5f-8478-bd2b125c6a21,212,0,0
+1794969409553,205,04 List records (page 1),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,5096,285,2,2,https://reqres.in/api/collections/products/records?page=1&limit=10,204,0,0
+1794969409610,202,02 Get single record,200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2302,306,2,2,https://reqres.in/api/collections/products/records/6dbf52bb-33e6-4bd6-8207-7bce15b117ae,202,0,0
+1794969410465,208,03 Update record (PUT),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2270,537,2,2,https://reqres.in/api/collections/products/records/6dbf52bb-33e6-4bd6-8207-7bce15b117ae,208,0,0
+1794969410553,202,05 Delete record,204,No Content,TG1 - Admin CRUD lifecycle (manage key) 1-1,,true,,1739,328,2,2,https://reqres.in/api/collections/products/records/202084b9-c371-4a5f-8478-bd2b125c6a21,0,0,0
+1794969411223,206,04 List records (page 1),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,4660,285,2,2,https://reqres.in/api/collections/products/records?page=1&limit=10,205,0,0
+1794969411341,211,01 Create record,201,Created,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2285,511,2,2,https://reqres.in/api/collections/products/records,210,0,0
+1794969412089,206,02 Get single record,200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2309,306,2,2,https://reqres.in/api/collections/products/records/6ccdb43e-39e8-45b9-b6ea-8ce5fdcecc95,206,0,0
+1794969412222,205,05 Delete record,204,No Content,TG1 - Admin CRUD lifecycle (manage key) 1-2,,true,,1747,328,2,2,https://reqres.in/api/collections/products/records/6dbf52bb-33e6-4bd6-8207-7bce15b117ae,0,0,0
+1794969412948,211,01 Create record,201,Created,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2287,510,2,2,https://reqres.in/api/collections/products/records,211,0,0
+1794969413254,202,03 Update record (PUT),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,2285,549,2,2,https://reqres.in/api/collections/products/records/6ccdb43e-39e8-45b9-b6ea-8ce5fdcecc95,202,0,0
+1794969413603,206,02 Get single record,200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2303,306,2,2,https://reqres.in/api/collections/products/records/e6f83707-255c-40b9-81ac-076be8a676e4,206,0,0
+1794969413930,204,04 List records (page 1),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-1,text,true,,5104,285,2,2,https://reqres.in/api/collections/products/records?page=1&limit=10,204,0,0
+1794969414137,213,03 Update record (PUT),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,2287,551,2,2,https://reqres.in/api/collections/products/records/e6f83707-255c-40b9-81ac-076be8a676e4,212,0,0
+1794969414870,199,05 Delete record,204,No Content,TG1 - Admin CRUD lifecycle (manage key) 1-1,,true,,1754,328,2,2,https://reqres.in/api/collections/products/records/6ccdb43e-39e8-45b9-b6ea-8ce5fdcecc95,0,0,0
+1794969415218,203,04 List records (page 1),200,OK,TG1 - Admin CRUD lifecycle (manage key) 1-2,text,true,,4689,285,1,1,https://reqres.in/api/collections/products/records?page=1&limit=10,203,0,0
+1794969415791,203,05 Delete record,204,No Content,TG1 - Admin CRUD lifecycle (manage key) 1-2,,true,,1742,328,1,1,https://reqres.in/api/collections/products/records/e6f83707-255c-40b9-81ac-076be8a676e4,0,0,0
